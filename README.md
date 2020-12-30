@@ -1,7 +1,7 @@
 # ConfirmedToday
 오늘 확진자, 실시간 스팀 게임 순위를 집계해주는 프로그램
 
-서버 : C#
+서버 : C#, 크롤링은 HtmlAgilityPack 패키지를 사용
 
 클라이언트 : C#, C++
 
