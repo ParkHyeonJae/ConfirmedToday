@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5hHXS8lyyYOO8LIVQZ9g+wDRokEkmjoDxRgVBKoS7ymDtQ6d99qFm/qIJv7lFhLhwvgU6+iqsU0KEA98aOze9A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\ConfirmedToday_Server\\ConfirmedToday_Server\\ConfirmedToday_Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\htmlagilitypack\\1.11.29\\htmlagilitypack.1.11.29.nupkg.sha512"
+  ],
+  "logs": []
+}

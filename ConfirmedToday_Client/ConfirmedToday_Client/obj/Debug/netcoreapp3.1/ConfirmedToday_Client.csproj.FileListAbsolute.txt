@@ -1,0 +1,13 @@
+C:\Users\user\source\repos\ConfirmedToday_Client\ConfirmedToday_Client\bin\Debug\netcoreapp3.1\ConfirmedToday_Client.exe
+C:\Users\user\source\repos\ConfirmedToday_Client\ConfirmedToday_Client\bin\Debug\netcoreapp3.1\ConfirmedToday_Client.deps.json
+C:\Users\user\source\repos\ConfirmedToday_Client\ConfirmedToday_Client\bin\Debug\netcoreapp3.1\ConfirmedToday_Client.runtimeconfig.json
+C:\Users\user\source\repos\ConfirmedToday_Client\ConfirmedToday_Client\bin\Debug\netcoreapp3.1\ConfirmedToday_Client.runtimeconfig.dev.json
+C:\Users\user\source\repos\ConfirmedToday_Client\ConfirmedToday_Client\bin\Debug\netcoreapp3.1\ConfirmedToday_Client.dll
+C:\Users\user\source\repos\ConfirmedToday_Client\ConfirmedToday_Client\bin\Debug\netcoreapp3.1\ConfirmedToday_Client.pdb
+C:\Users\user\source\repos\ConfirmedToday_Client\ConfirmedToday_Client\obj\Debug\netcoreapp3.1\ConfirmedToday_Client.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\ConfirmedToday_Client\ConfirmedToday_Client\obj\Debug\netcoreapp3.1\ConfirmedToday_Client.AssemblyInfo.cs
+C:\Users\user\source\repos\ConfirmedToday_Client\ConfirmedToday_Client\obj\Debug\netcoreapp3.1\ConfirmedToday_Client.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ConfirmedToday_Client\ConfirmedToday_Client\obj\Debug\netcoreapp3.1\ConfirmedToday_Client.dll
+C:\Users\user\source\repos\ConfirmedToday_Client\ConfirmedToday_Client\obj\Debug\netcoreapp3.1\ConfirmedToday_Client.pdb
+C:\Users\user\source\repos\ConfirmedToday_Client\ConfirmedToday_Client\obj\Debug\netcoreapp3.1\ConfirmedToday_Client.genruntimeconfig.cache
+C:\Users\user\source\repos\ConfirmedToday_Client\ConfirmedToday_Client\obj\Debug\netcoreapp3.1\ConfirmedToday_Client.csprojAssemblyReference.cache
