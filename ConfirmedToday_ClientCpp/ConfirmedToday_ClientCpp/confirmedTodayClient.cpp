@@ -10,7 +10,6 @@
 #pragma warning(disable: 4996)
 
 #define BUFFERSIZE 16384
-using namespace std;
 
 char* ANSIToUTF8(const char* pszCode)
 {
@@ -56,25 +55,25 @@ int main(void)
 	SOCKADDR_IN servAddr;
 
 	//setlocale(LC_ALL, "korean");
-	if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) printf("Failed WSAStartup() \n");
+	if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) std::cout << "Failed WSAStartup() \n";
 
 	hSocket = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
-	if (hSocket == INVALID_SOCKET) printf("Failed Socket \n");
+	if (hSocket == INVALID_SOCKET) std::cout << "Failed Socket \n";
 
 	memset(&servAddr, 0, sizeof(servAddr));
 
 	servAddr.sin_family = AF_INET;
 
-	inet_pton(AF_INET, "127.0.0.1", &servAddr.sin_addr);
-	servAddr.sin_port = htons(7777);
+	inet_pton(AF_INET, "49.164.30.10", &servAddr.sin_addr);
+	servAddr.sin_port = htons(39311);
 
 	if (connect(hSocket, (SOCKADDR*)&servAddr, sizeof(servAddr)) == SOCKET_ERROR)
-		printf("Failed connect() \n");
+		std::cout << "Failed connect() \n";
 
-	printf("Connect Server\n");
+	std::cout << "Connect Server\n";
 
 	char sendBuff[256];
-	string sendMessage;
+	std::string sendMessage;
 	char recvBuff[BUFFERSIZE];
 	char recvMessage[BUFFERSIZE];
 	while (true)
@@ -83,15 +82,14 @@ int main(void)
 		memset(&recvMessage, 0, sizeof(recvMessage));
 		memset(&recvBuff, 0, sizeof(recvBuff));
 
-		scanf("%s", sendBuff);
-		getchar();
-		sendMessage = ANSIToUTF8(sendBuff);
+		std::cin >> sendBuff;
+		sendMessage = std::move(ANSIToUTF8(std::move(sendBuff)));
 		send(hSocket, sendMessage.c_str(), sendMessage.size(), 0);
-		printf("send bytes : %d\n", sendMessage.size());
+		std::cout << "send bytes : " << sendMessage.size() << std::endl;
 		
 		int n = recv(hSocket, recvBuff, sizeof(recvBuff), 0);
-		char* result = UTF8ToANSI(recvBuff);
-		printf("%s \n", result);
+		char* result = std::move(UTF8ToANSI(std::move(recvBuff)));
+		std::cout << result << std::endl;
 	}
 	closesocket(hSocket);
 	WSACleanup();

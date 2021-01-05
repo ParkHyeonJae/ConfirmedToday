@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\ConfirmedToday_Client\\ConfirmedToday_Client\\ConfirmedToday_Client.csproj": {}
+    "C:\\Users\\user\\Desktop\\Projects\\Server\\ConfirmedToday\\ConfirmedToday_Client\\ConfirmedToday_Client\\ConfirmedToday_Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\ConfirmedToday_Client\\ConfirmedToday_Client\\ConfirmedToday_Client.csproj": {
+    "C:\\Users\\user\\Desktop\\Projects\\Server\\ConfirmedToday\\ConfirmedToday_Client\\ConfirmedToday_Client\\ConfirmedToday_Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\ConfirmedToday_Client\\ConfirmedToday_Client\\ConfirmedToday_Client.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Projects\\Server\\ConfirmedToday\\ConfirmedToday_Client\\ConfirmedToday_Client\\ConfirmedToday_Client.csproj",
         "projectName": "ConfirmedToday_Client",
-        "projectPath": "C:\\Users\\user\\source\\repos\\ConfirmedToday_Client\\ConfirmedToday_Client\\ConfirmedToday_Client.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\Projects\\Server\\ConfirmedToday\\ConfirmedToday_Client\\ConfirmedToday_Client\\ConfirmedToday_Client.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\ConfirmedToday_Client\\ConfirmedToday_Client\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Projects\\Server\\ConfirmedToday\\ConfirmedToday_Client\\ConfirmedToday_Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

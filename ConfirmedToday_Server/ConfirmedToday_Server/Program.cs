@@ -3,53 +3,45 @@ using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-
+using System.Threading;
+using System.IO;
 
 namespace ConfirmedToday_Server
 {
-    class Program
+    public class ClientHandler
     {
-        public static TodayConfirmed todayConfirmed = new TodayConfirmed();
-        static void Main(string[] args)
+        Socket socket;
+        public static TodayConfirmed todayConfirmed;
+        public ClientHandler(Socket socket)
         {
-            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPEndPoint ep = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 7777);
-            socket.Bind(ep);
+            this.socket = socket;
+        }
+        
+        public void Message()
+        {
+            todayConfirmed = new TodayConfirmed();
 
-            socket.Listen(10);
-
-            Socket accpetClient = socket.Accept();
-            if (accpetClient.Connected)
-                Console.WriteLine("클라이언트 연결");
-            while (!Console.KeyAvailable)
+            while (true)
             {
-                if (!accpetClient.Connected)
-                {
-                    accpetClient = socket.Accept();
-                    continue;
-                }
                 byte[] buff = new byte[16384];
                 string result;
                 try
                 {
-                    int n = accpetClient.Receive(buff);
+                    int n = socket.Receive(buff);
                     result = Encoding.UTF8.GetString(buff, 0, n);
                 }
-                catch(SocketException e)
+                catch (SocketException e)
                 {
-                    accpetClient.Close();
-                    Console.WriteLine($"연결 종료 : " + e.Message);
-                    continue;
+                    Console.WriteLine($"연결 종료 : {e.Message} -> {socket.LocalEndPoint}");
+                    socket.Close();
+                    break;
                 }
-                
-                Console.WriteLine($"Client Call : {result}");
+
+                Console.WriteLine($"Client({socket.LocalEndPoint}) Call : {result}");
                 string convertedMessage = MessageProcessToCase(result.TrimStart());
                 Console.WriteLine($"Loaded {Encoding.UTF8.GetBytes(result).Length} Bytes");
-                accpetClient.Send(Encoding.UTF8.GetBytes(convertedMessage));
-
+                socket.Send(Encoding.UTF8.GetBytes(convertedMessage));
             }
-            accpetClient.Close();
-            socket.Close();
         }
         static string MessageProcessToCase(string content)
         {
@@ -76,10 +68,41 @@ namespace ConfirmedToday_Server
 
             return "입력된 커멘드가 존재하지 않습니다";
         }
+    }
 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            IPEndPoint ep = new IPEndPoint(IPAddress.Parse("192.168.219.100"), 39311);
+            socket.Bind(ep);
 
+            socket.Listen(10);
 
-        
+            Socket accpetClient;
+            accpetClient = socket.Accept();
+            while (!Console.KeyAvailable)
+            {
+                try
+                {
+                    if (accpetClient.Connected)
+                    {
+                        Console.WriteLine("클라이언트 연결 : " + accpetClient.LocalEndPoint.ToString());
+                        ClientHandler clientHandler = new ClientHandler(accpetClient);
+                        Thread t = new Thread(new ThreadStart(clientHandler.Message));
+                        t.Start();
+                    }
+                    accpetClient = socket.Accept();
+                }
+                catch(IOException e)
+                {
+                    if (!accpetClient.Connected)
+                        accpetClient.Close();
+                }
+            }
+            socket.Close();
+        }
     }
     public class TodayConfirmed
     {

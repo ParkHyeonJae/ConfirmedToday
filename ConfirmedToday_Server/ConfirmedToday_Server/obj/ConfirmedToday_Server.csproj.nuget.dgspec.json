@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\ConfirmedToday_Server\\ConfirmedToday_Server\\ConfirmedToday_Server.csproj": {}
+    "C:\\Users\\user\\Desktop\\Projects\\Server\\ConfirmedToday\\ConfirmedToday_Server\\ConfirmedToday_Server\\ConfirmedToday_Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\ConfirmedToday_Server\\ConfirmedToday_Server\\ConfirmedToday_Server.csproj": {
+    "C:\\Users\\user\\Desktop\\Projects\\Server\\ConfirmedToday\\ConfirmedToday_Server\\ConfirmedToday_Server\\ConfirmedToday_Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\ConfirmedToday_Server\\ConfirmedToday_Server\\ConfirmedToday_Server.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\Projects\\Server\\ConfirmedToday\\ConfirmedToday_Server\\ConfirmedToday_Server\\ConfirmedToday_Server.csproj",
         "projectName": "ConfirmedToday_Server",
-        "projectPath": "C:\\Users\\user\\source\\repos\\ConfirmedToday_Server\\ConfirmedToday_Server\\ConfirmedToday_Server.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\Projects\\Server\\ConfirmedToday\\ConfirmedToday_Server\\ConfirmedToday_Server\\ConfirmedToday_Server.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\ConfirmedToday_Server\\ConfirmedToday_Server\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\Projects\\Server\\ConfirmedToday\\ConfirmedToday_Server\\ConfirmedToday_Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
